@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            Ionic 2
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Textract Image Example
+        </ion-card-header>
+        <ion-card-content>
+            <div ion-item>
+                <button ion-button icon-left (click)="openMenu()" color="material-secondary">
+                    <ion-icon name="image"></ion-icon>
+                    Select image
+                </button>
+            </div>
+            <p>Choose image text from gallery or take from camera...</p>
+        </ion-card-content>
+    </ion-card>
+
+    <ion-row>
+        <ion-col>
+            <img [src]="imgURI" *ngIf="imgURI" />
+        </ion-col>
+    </ion-row>
+</ion-content>
